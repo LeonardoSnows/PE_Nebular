@@ -1,5 +1,17 @@
-<div cdkDropList cdkDropListOrientation="mixed" class="example-list" (cdkDropListDropped)="drop($event)">
+<!-- <div cdkDropList cdkDropListOrientation="mixed" class="example-list" (cdkDropListDropped)="drop($event)">
   @for (item of items; track item) {
     <div class="example-box" cdkDrag>{{item}}</div>
   }
+</div>
+
+<div class="grid-container">
+  <div class="grid-item" *ngFor="let item of items">
+    {{ item }}
+  </div>
+</div>
+ -->
+<div class="grid-container">
+  <div class="grid-item draggable" *ngFor="let item of items" [attr.data-index]="item.id">
+    {{ item.name }}
+  </div>
 </div>
